@@ -1,0 +1,22 @@
+{{theme:partial name="header"}}
+			<section id="main">
+				{{blog:posts}}
+					<article data-id="{{id}}">
+						<time>{{helper:date format="d" timestamp=created_on}}&nbsp;{{helper:date format="M" timestamp=created_on}}</time>
+						<div class="post">
+							<!-- <a href="{{url}}"> -->
+								<h3>{{title}}</h3>
+							<!-- </a> -->
+							<div class="content">
+								{{intro}}
+							</div>
+							<a href="{{url}}" class="more">
+								Read More
+								<i class="icon-arrow-right"></i>
+							</a>
+						</div>
+					</article>
+
+				{{/blog:posts}}
+			</section>
+{{theme:partial name="footer"}}

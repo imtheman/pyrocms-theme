@@ -7,5 +7,15 @@ class Theme_Personal extends Theme
     public $website         = 'http://treahauet.com';
     public $description     = '';
     public $version         = '1.0';
+    public $options			= array(
+    	'initials'	=> array(
+    		'title' => 'Initials',
+    		'description' => 'Used in the "emblem" in the main header.',
+    		'default' => '',
+    		'type' => 'text',
+    		'options' => '',
+    		'is_required' => true
+		)
+	);
  }
 /* End of file theme.php */

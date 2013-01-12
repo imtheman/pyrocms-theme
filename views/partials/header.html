@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{{if template:title == settings:site_name}}{{template:title}}{{else}}{{template:title}} &bull; {{settings:site_name}}{{endif}}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		{{theme:css file="global.css"}}
+		{{theme:js file="bootstrap-tooltips.min.js"}}
+		<link href='http://fonts.googleapis.com/css?family=Denk+One|Dosis:200,400' rel='stylesheet' type='text/css'>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css" rel="stylesheet">
+		{{theme:favicon}}
+		{{template:metadata}}
+	</head>
+	<body>
+		<header>
+			<a href="{{url:site}}" class="name">{{settings:site_name}}</a>
+			<a href="{{url:site}}">
+			<div class="emblem">
+				<div class="th">TH</div>
+			</div>
+				
+			</a>
+			<nav>
+				<ul>
+					{{navigation:links group="header"}}
+				</ul>
+			</nav>
+		</header>
+		<div class="contain">
+			<h3 class="lead">I'm a Web Developer from <a href="http://maps.google.com?q=Utah">Utah</a>. I build websites and web applications with HTML, CSS, PHP, and Javascript (Client-side and <a href="http://nodejs.org">Node.js</a>) using cool projects like <a href="http://pyrocms.com">PyroCMS</a>,<a href="http://laravel.com">Laravel</a>, <a href="http://angularjs.org">AngularJS</a>, <a href="http://jquery.com">jQuery</a> and others! I enjoy the great outdoors<sup title="Warm weather only!">*</sup>, cooking, and other random adventures.</h3>

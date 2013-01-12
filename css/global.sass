@@ -1,0 +1,314 @@
+$blue: #0c86ae
+
+body
+	margin: 0
+	padding: 0
+	background-color: #e2e2e2
+	text-align: center
+	font-family: "Dosis"
+	position: relative
+
+	h1, h2, h3, h4, h5, h6
+		font-family: "Denk One"
+
+		a
+			// font-family: "Dosis"
+	a, a:visited, a:hover
+		color: $blue
+		text-decoration: none
+	a:hover
+		color: #089ecf
+	.fright
+		float: right
+	.right
+		text-align: right
+
+	header
+		display: block
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 70px
+		min-height: 70px
+		z-index: 50
+		background: url(../img/blackorchid.png) repeat
+		box-shadow: 0px 0px 5px 5px #000
+
+		a.name
+			display: inline-block
+			color: $blue
+			font-family: "Dosis" 
+			font-size: 2em
+			text-decoration: none
+			float: left
+			position: relative
+			top: 20%
+			left: 1%
+
+		div.emblem
+			display: inline-block
+			height: 50px
+			width: 50px
+			background-color: $blue
+			margin: auto
+			border-radius: 50%
+			position: relative
+			top: 18%
+			left: 8.2%
+
+			div.th
+				font-family: "Denk One"
+				font-size: 2em
+				color: #ffffff
+				position: relative
+				top: 12%
+		nav
+			display: inline-block
+			float: right
+			font-size: 1.3em
+			position: relative
+			top: 20%
+			right: 1%
+
+			ul
+				display: inline-block
+				list-style: none
+				margin: 0
+				padding: 0
+
+				li
+					display: inline-block
+					list-style: none
+					margin: 0
+					padding: 10px
+					// padding-bottom: 10px
+			
+					a, a:visited
+						font-family: "Dosis"
+						color: $blue
+						text-decoration: none
+					a:hover
+						color: #089ecf
+
+
+				li:not(:last-of-type)
+					margin-right: 15px
+				
+				li.current
+					border-bottom: 2px solid $blue
+	div.contain
+		// overflow: auto
+		width: 75%
+		max-width: 1200px
+		min-height: 500px
+		padding-top: 50px
+		margin: 100px auto
+		text-align: left
+
+		h3.lead
+			text-align: center
+			margin-bottom: 200px
+		section#main
+			display: inline-block
+			// float: left
+			width: 70%
+			text-align: left
+
+			article
+				// float: left
+				width: 100%
+				position: relative
+
+				time
+					position: absolute
+					left: -5%
+					top: 0px
+					height: 100%
+					display: inline-block
+					// margin-righ
+					text-transform: uppercase
+					// float: left
+					// position: relative
+					margin-right: 5%
+					color: $blue
+					letter-spacing: 5px
+					width: 5px !important
+					word-wrap: break-word
+
+				.post
+					width: 90%
+					display: inline-block
+
+					h3
+						// display: inline-block
+						margin: 0
+					.content
+						margin: 10px auto
+					.more
+						background-color: $blue
+						color: #ffffff !important
+						padding: 5px
+						border-radius: 10px
+			article:not(:last-of-type)
+				margin-bottom: 50px
+
+			article:not(:last-of-type):after
+				display: block
+				content: "\A"
+				width: 100%
+				height: 50px
+				position: relative
+				top: 105%
+				border-bottom: 1px solid $blue
+		aside
+			float: right
+			width: 22%
+
+			.widget.blog_categories
+				h3
+					margin-top: 0
+				ul
+					list-style: none
+					padding-left: 0
+					li
+						list-style: none
+	footer
+		position: relative
+		bottom: 0px
+		width: 100%
+		min-height: 200px
+		background: url(../img/blackorchid.png) repeat
+		box-shadow: 0px 0px 5px 5px #000
+
+		>div:nth-of-type(1), >div:nth-of-type(3)
+			width: 22%
+		>div:nth-of-type(2)
+			width: 50%
+		div
+			display: inline-block
+			height: 100%
+			color: #ffffff
+			vertical-align: top
+
+			h3
+				font-family: "Dosis"
+				color: $blue
+
+			ul
+				padding: 0
+				margin: 0
+				list-style: none
+
+				li
+					list-style: none
+
+					a.details
+						visibility: hidden
+
+
+
+
+@media screen and (max-width: 640px)
+	.emblem
+		display: none !important
+
+	header
+		text-align: center !important
+		.name
+			display: block !important
+			float: none !important
+			position: auto !important
+			left: auto !important
+			font-size: 1em !important
+		nav
+			display: block !important
+			margin: auto !important
+			text-align: center !important
+			font-size: 0.5em !important
+			float: none !important
+
+			li:not(:last-of-type)
+				margin-right: 8px !important
+
+// Twitter Bootstrap Tooltip
+.clearfix:before, .clearfix:after
+	display: table
+	content: ""
+	line-height: 0
+.clearfix:after
+	clear: both
+.hide-text
+	font: 0/0 a
+	color: transparent
+	text-shadow: none
+	background-color: transparent
+	border: 0
+.input-block-level
+	display: block
+	width: 100%
+	min-height: 30px
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+.tooltip
+	position: absolute
+	z-index: 1030
+	display: block
+	visibility: visible
+	padding: 5px
+	font-size: 11px
+	opacity: 0
+	filter: alpha(opacity=0)
+	font-family: 'Arial' !important
+.tooltip.in
+	opacity: 0.8
+	filter: alpha(opacity=80)
+.tooltip.top
+	margin-top: -3px
+.tooltip.right
+	margin-left: 3px
+.tooltip.bottom
+	margin-top: 3px
+.tooltip.left
+	margin-left: -3px
+.tooltip-inner
+	max-width: 200px
+	padding: 3px 8px
+	color: #ffffff
+	text-align: center
+	text-decoration: none
+	background-color: #000000
+	-webkit-border-radius: 4px
+	-moz-border-radius: 4px
+	border-radius: 4px
+.tooltip-arrow
+	position: absolute
+	width: 0
+	height: 0
+	border-color: transparent
+	border-style: solid
+.tooltip.top .tooltip-arrow
+	bottom: 0
+	left: 50%
+	margin-left: -5px
+	border-width: 5px 5px 0
+	border-top-color: #000000
+.tooltip.right .tooltip-arrow
+	top: 50%
+	left: 0
+	margin-top: -5px
+	border-width: 5px 5px 5px 0
+	border-right-color: #000000
+.tooltip.left .tooltip-arrow
+	top: 50%
+	right: 0
+	margin-top: -5px
+	border-width: 5px 0 5px 5px
+	border-left-color: #000000
+.tooltip.bottom .tooltip-arrow
+	top: 0
+	left: 50%
+	margin-left: -5px
+	border-width: 0 5px 5px
+	border-bottom-color: #000000
